@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/rssfeeder.css" rel="stylesheet" type="text/css"/>
+    <script src="assets/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="assets/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="assets/knockout-3.3.0.js" type="text/javascript"></script>
+    <script src="js/rssFeederData.js" type="text/javascript"></script>
+
+</head>
+<body onload="getListData('https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=17&type=video&key=AIzaSyAcecFriKxOqzxqQVTybGtuSFY4y82lwEM')">
+<h1>RSS Feed Example with knockout.js</h1>
+
+<div class="mainDiv">
+
+    <div class="inputDiv">
+            <!--<input id="feedUrlInput" class="searchInput" type="list" data-bind="value: channelId"/>-->
+            <!--<a class="link loadFeed" >Filter By Channel ID</a>-->
+            <!--<select data-bind='options: channelId, optionsCaption: "Filter by channel ID...",  value: url , event:{ change: channelChanged}'> </select>-->
+
+           <select data-bind='options: channelId, optionsCaption: "Filter by channel ID...",  value: url'> </select>
+        </div>
+
+    <div id="feed">
+       <ul id="feedList" data-bind="template: {name: 'feedItemTemplate', foreach: entries}" class="feedList">
+        </ul>
+
+        <script id="feedItemTemplate" type="text/html">
+            <li class="feedListItem">
+                <a href="">
+                    <img class= "itemImage" data-bind="attr:{src: thumbnails.default.url}" />
+                </a>
+                <span class="itemContainer">
+                    <a class="link" href="${link}" target="_blank">${title}</a>
+                    <label class="itemDate">${publishedAt}</label>
+                    <p class="itemcontent">${description}</p>
+                </span>
+
+            </li>
+        </script>
+    </div>
+</div>
+</body>
+</html>

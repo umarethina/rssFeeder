@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  
     <link href="css/rssfeeder.css" rel="stylesheet" type="text/css"/>
     <script src="assets/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="assets/jquery.tmpl.min.js" type="text/javascript"></script>
@@ -8,7 +14,18 @@
     <script src="js/rssFeederData.js" type="text/javascript"></script>
 
 </head>
+
 <body onload="getListData('https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=17&type=video&key=AIzaSyAcecFriKxOqzxqQVTybGtuSFY4y82lwEM')">
+ <section class="page-header">
+      <h1 class="project-name">RSS Feed Example with knockout.js</h1>
+      <h2 class="project-tagline">RSS Feed Example with knockout.js</h2>
+      <a href="https://github.com/umarethina/interview" class="btn">View on GitHub</a>
+      <a href="https://github.com/umarethina/interview/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/umarethina/interview/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="#" onclick="getListData('https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=17&type=video&key=AIzaSyAcecFriKxOqzxqQVTybGtuSFY4y82lwEM')" class="btn">Rss Feeder</a>
+      
+    </section>
+    
 <h1>RSS Feed Example with knockout.js</h1>
 
 <div class="mainDiv">
@@ -18,7 +35,7 @@
             <!--<a class="link loadFeed" >Filter By Channel ID</a>-->
             <!--<select data-bind='options: channelId, optionsCaption: "Filter by channel ID...",  value: url , event:{ change: channelChanged}'> </select>-->
 
-           <select data-bind='options: channelId, optionsCaption: "Filter by channel ID...",  value: url'> </select>
+           <select class="inputChannelId" data-bind='options: channelId, optionsCaption: "Filter by channel ID...",  value: url'> </select>
         </div>
 
     <div id="feed">

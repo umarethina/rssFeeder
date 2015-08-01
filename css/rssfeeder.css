@@ -20,11 +20,10 @@
 {
     font-weight: bold;
 }
-.searchInput
+.inputChannelId
 {
     width: 90%;
     height: 25px;
-    font-weight: bold;
 }
 .title
 {

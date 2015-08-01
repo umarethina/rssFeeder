@@ -1,0 +1,100 @@
+
+.mainDiv
+{
+    margin-top: 25px;
+    width: 960px;
+}
+.loadFeed
+{
+    border: 1px solid gray;
+    background-color: silver;
+    color: black;
+    padding: 5px;
+}
+
+.inputDiv{
+   padding-left: 40px;
+}
+
+.inputDiv label
+{
+    font-weight: bold;
+}
+.searchInput
+{
+    width: 90%;
+    height: 25px;
+    font-weight: bold;
+}
+.title
+{
+    font-size: 16px;
+}
+.description
+{
+    font-size: 13px;
+    font-style: italic;
+}
+.link
+{
+    cursor: pointer;
+}
+.channelTitle
+{
+    font-size: 14px;
+}
+.feedList
+{
+}
+.feedListItem
+{
+    list-style-type: none;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+
+}
+
+.feedListItem img, .feedListItem a{
+    list-style-type: none;
+}
+.itemImageContainer
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    /*border: 1px solid black;*/
+    padding: 4px;
+    margin: 4px;
+}
+.itemImage {
+    clear: both;
+    float: left;
+    margin: 4px;
+}
+
+.itemContainer{
+
+}
+
+.itemContainer p, .itemContainer label, .itemContainer a{
+    list-style-type: none;
+}
+
+.itemDate
+{
+    font-size: 11px;
+    font-style: italic;
+}
+.itemcontent:before
+{
+    content: '"';
+}
+.itemcontent:after
+{
+    content: '"';
+}
+.itemcontent
+{
+   font-size: 18px;
+}
